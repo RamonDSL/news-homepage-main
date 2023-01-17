@@ -1,0 +1,130 @@
+:root {
+    /* Primary */
+
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+
+/* Neutral */
+
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav > button.btn-menu {
+    display: none;
+}
+
+header nav > ul.navbar {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    top: auto;
+    right: auto;
+    height: auto;
+    width: auto;
+    visibility: visible;
+
+    list-style: none;
+    background-color: var(--Off-white);
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    margin-top: 20px;
+
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+header nav > ul.navbar > li{
+    padding-block-end: 25px;
+    padding-inline-end: 35px;
+}
+
+header nav > ul.navbar > li:hover {
+    color: var(--Soft-red);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "c1 c1 c2"
+    "c3 c4 c2"
+    "c5 c5 c5";
+    padding-top: 20px;
+    gap: 20px;
+}
+
+main > section.item-1 {
+    grid-area: c1;
+}
+
+main > article.item-2 {
+    grid-area: c3;
+}
+main > article.item-2 > h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+
+main > article.item-3 {
+    padding-bottom: 0;
+    grid-area: c4;
+}
+main > article.item-3 > p {
+    padding-bottom: 20px;
+}
+main > article.item-3 > button {
+    cursor: pointer;
+}
+main > article.item-3 > button:hover {
+    color: var(--Off-white);
+    background-color: var(--Very-dark-blue);
+}
+
+main > section.item-4 {
+    grid-area: c2;
+    padding: 20px;
+}
+main > section.item-4 > h2 {
+    color: var(--Soft-orange);
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+main > section.item-4 > article > h3 {
+    cursor: pointer;
+}
+main > section.item-4 > article > h3:hover {
+    color: var(--Soft-orange);
+}
+main > section.item-4 > article > p {
+    color: var(--Grayish-blue);
+    font-weight: 500;
+    padding: 10px 0 20px 0;
+}
+main > section.item-4 > article > hr {
+    margin: 30px 0;
+}
+
+section.item-5 {
+    display: flex;
+    grid-area: c5;
+}
+main > section.item-5 > article > div.rigth > h3 {
+    cursor: pointer;
+}
+main > section.item-5 > article > div.rigth > h3:hover {
+    color: var(--Soft-red);
+}
